@@ -1,0 +1,6 @@
+.Movie {
+    width: 75%;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1.5px 1.5px grey;
+    margin-top: 30px;
+}

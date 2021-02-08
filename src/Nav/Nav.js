@@ -23,7 +23,7 @@ class Nav extends React.Component
             {TokenService.hasAuthToken() ? 
               <>
                 <li><Link to="/movies">Movies</Link></li>
-                <li><a onClick={this.logout}>Log out</a></li>
+                <li><a href="/" onClick={this.logout}>Log out</a></li>
               </> :
               <>
                 <li><Link to="/login">Log in</Link></li>
