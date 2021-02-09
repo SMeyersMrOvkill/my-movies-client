@@ -26,6 +26,14 @@ form {
     flex-direction: column;
 }
 
+select {
+    height: 25px;
+}
+
+input {
+    height: 25px;
+}
+
 @media (min-width: 600px) {
     form {
         width: 300px;

@@ -10,9 +10,9 @@ class Movie extends React.Component
       <div className="Movie">
         <h1>{this.props.movie.name}</h1>
         {this.props.view === 'list' ? 
-          <Link to={'/movies/' + this.props.movie.id + '/view'}>View</Link>
+          <Link to={`/movies/${this.props.movie.id}/view`}>View</Link>
           : <Link to="/movies">Back</Link>
-        }
+        } | <Link to={`/movies/${this.props.movie.id}/edit`}>Edit</Link>
         <p>{this.props.movie.description}</p>
         <p>Rating: {this.props.movie.rating}</p>
         <p>Genre: {this.props.movie.genre}</p>

@@ -3,4 +3,10 @@
     border: 1px solid grey;
     box-shadow: 1px 1px 1.5px 1.5px grey;
     margin-top: 30px;
+    padding-left: 30px;
+    border-radius: 25px;
+}
+
+.Movie:last-child {
+    margin-bottom: 30px;
 }

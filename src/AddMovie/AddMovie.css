@@ -1,0 +1,33 @@
+.AddMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.FormContainer {
+    width: 75%;
+    border: 1px solid grey;
+    border-radius: 25px;
+}
+
+.FormGroup {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input {
+    width: 97%;
+    transform: translate(-5px, 0px);
+}
+
+hr {
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .FormContainer {
+        width: 50%;
+    }
+}

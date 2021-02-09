@@ -32,10 +32,17 @@ class MovieList extends React.Component
     this.setState({sort: {rating: parseInt(rating), genre: this.state.sort.genre}});
   }
 
+  goToAddMovie = () => {
+    window.location = '/movies/add';
+  }
+
   render() {
     return (
       <div className="MovieList">
         <div className="SortContainer">
+          <div className="SortOption">
+            <button onClick={this.goToAddMovie}>Add Movie</button>
+          </div>
           <div className="SortOption">
             <label htmlFor="genre">Genre: </label>
             <GenreList mode="sort" id="genre" onChange={e => this.onGenreChanged(e.target.value)} />
@@ -54,7 +61,7 @@ class MovieList extends React.Component
         {this.context.movies.length > 0 ? 
           this.context.movies.map(movie => {
             if(this.state.sort.genre === 'All' || this.state.sort.genre === movie.genre) {
-              if(this.state.sort.rating < movie.rating) {
+              if(this.state.sort.rating <= movie.rating) {
                 return <Movie movie={movie} view="list" key={movie.name} />
               }
             }
