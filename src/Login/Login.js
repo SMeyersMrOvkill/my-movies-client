@@ -3,6 +3,7 @@ import React from 'react';
 import AuthApiService from '../services/auth-api-service';
 
 import '../Form.css';
+import './Login.css';
 
 class Login extends React.Component
 {
@@ -60,20 +61,23 @@ class Login extends React.Component
 
   render() {
     return (
-      <div className="FormContainer">
-        <form>
-          <div className="FormGroup">
-            <label htmlFor="user_name">Username: </label>
-            <input id="user_name" onChange={e => this.onUserNameChanged(e.target.value)} />
-          </div>
-          <div className="FormGroup">
-            <label htmlFor="password">Password: </label>
-            <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
-          </div>
-          <button 
-            disabled={!this.validateFields()} 
-            onClick={this.handleSubmitJwtAuth} >Submit</button>
-        </form>
+      <div className="Login">
+        <div className="FormContainer">
+          <form>
+            <div className="FormGroup">
+              <label htmlFor="user_name">Username: </label>
+              <input id="user_name" onChange={e => this.onUserNameChanged(e.target.value)} />
+            </div>
+            <div className="FormGroup">
+              <label htmlFor="password">Password: </label>
+              <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
+            </div>
+            <hr />
+            <button 
+              disabled={!this.validateFields()} 
+              onClick={this.handleSubmitJwtAuth} >Submit</button>
+          </form>
+        </div>
       </div>
     )
   }

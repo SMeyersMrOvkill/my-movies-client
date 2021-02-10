@@ -4,6 +4,7 @@ import config from '../config';
 import AuthApiService from '../services/auth-api-service';
 
 import '../Form.css';
+import './Register.css';
 
 class Register extends React.Component
 {
@@ -83,24 +84,27 @@ class Register extends React.Component
 
   render() {
     return (
-      <div className="FormContainer">
-        <form>
-          <div className="FormGroup">
-            <label htmlFor="user_name">Username: </label>
-            <input id="user_name" onChange={e => this.onUserNameChanged(e.target.value)} />
-          </div>
-          <div className="FormGroup">
-            <label htmlFor="full_name">Full Name: </label>
-            <input id="full_name" onChange={e => this.onFullNameChanged(e.target.value)} />
-          </div>
-          <div className="FormGroup">
-            <label htmlFor="password">Password: </label>
-            <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
-          </div>
-          <button
-            disabled={!this.validateFormData()}
-            onClick={this.submitRegistration}>Submit</button>
-        </form>
+      <div className="Register">
+        <div className="FormContainer">
+          <form>
+            <div className="FormGroup">
+              <label htmlFor="user_name">Username: </label>
+              <input id="user_name" onChange={e => this.onUserNameChanged(e.target.value)} />
+            </div>
+            <div className="FormGroup">
+              <label htmlFor="full_name">Full Name: </label>
+              <input id="full_name" onChange={e => this.onFullNameChanged(e.target.value)} />
+            </div>
+            <div className="FormGroup">
+              <label htmlFor="password">Password: </label>
+              <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
+            </div>
+            <hr />
+            <button
+              disabled={!this.validateFormData()}
+              onClick={this.submitRegistration}>Submit</button>
+          </form>
+        </div>
       </div>
     )
   }
