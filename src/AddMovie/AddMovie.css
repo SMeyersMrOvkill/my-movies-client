@@ -17,6 +17,10 @@
     margin-top: 10px;
 }
 
+.FormGroup:first-child {
+    margin-top: 35px;
+}
+
 input {
     width: 97%;
     transform: translate(-5px, 0px);

@@ -96,6 +96,7 @@ class AddMovie extends React.Component
             </div>
             <hr />
             <button
+            className="btn-success"
             disabled={!this.allValuesEntered()} 
             onClick={this.submit}>Submit</button>
           </form>

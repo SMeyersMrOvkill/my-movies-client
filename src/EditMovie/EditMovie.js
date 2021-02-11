@@ -8,6 +8,10 @@ import '../Form.css';
 
 class EditMovie extends React.Component
 {
+  static defaultProps = {
+    movie: {}
+  }
+
   static contextType = MovieContext;
 
   constructor(props) {
@@ -94,10 +98,10 @@ class EditMovie extends React.Component
             </div>
             <hr />
             <div className="FormGroup">
-              <button onClick={this.onSubmit}>Submit</button>
+              <button className="btn-success" onClick={this.onSubmit}>Submit</button>
             </div>
             <div className="FormGroup">
-              <button onClick={this.delete}>Delete</button>
+              <button className="btn-danger" onClick={this.delete}>Delete</button>
             </div>
           </form>
         </div>

@@ -5,6 +5,10 @@ import './Movie.css';
 
 class Movie extends React.Component
 {
+  static defaultProps = {
+    movie: {}
+  };
+
   render() {
     return (
       <div className="Movie">

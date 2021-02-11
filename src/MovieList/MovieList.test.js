@@ -2,12 +2,12 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import MovieList from './MovieList';
 
-describe('App Component', () => {
-  it('Should create an instance of App without crashing', () => {
+describe('MovieList Component', () => {
+  it('Should create an instance of MovieList without crashing', () => {
     const div = document.createElement("div");
-    ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, div);
+    ReactDOM.render(<BrowserRouter><MovieList /></BrowserRouter>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

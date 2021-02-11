@@ -41,7 +41,7 @@ class MovieList extends React.Component
       <div className="MovieList">
         <div className="SortContainer">
           <div className="SortOption">
-            <button onClick={this.goToAddMovie}>Add Movie</button>
+            <button className="btn-success" onClick={this.goToAddMovie}>Add Movie</button>
           </div>
           <div className="SortOption">
             <label htmlFor="genre">Genre: </label>

@@ -7,6 +7,10 @@ import './ViewMovie.css';
 
 class ViewMovie extends React.Component
 {
+  static defaultProps = {
+    movie: {}
+  };
+
   static contextType = MovieContext;
 
   render() {

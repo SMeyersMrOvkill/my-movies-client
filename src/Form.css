@@ -34,6 +34,25 @@ input {
     height: 25px;
 }
 
+button {
+    border-radius: 25px;
+}
+
+.btn-normal {
+    background-color: lightblue;
+    color: black;
+}
+
+.btn-success {
+    background-color: rgb(139, 206, 39);
+    color: black;
+}
+
+.btn-danger {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
 @media (min-width: 600px) {
     form {
         width: 300px;
