@@ -26,11 +26,18 @@ class App extends React.Component
     }
   }
 
+  /**
+   * Redirects the user to the login page when the curent token is expired.
+   */
   onUnauthorizedError = () => {
     window.location = '/login';
     this.setState({movies: []});
   }
 
+  /**
+   * Retrieves the list of movies from the server.
+   * Requires authorization.
+   */
   fetchMovies = () => {
     fetch(`${config.API_ENDPOINT}/movies`, {
       headers: {
@@ -50,6 +57,11 @@ class App extends React.Component
     })
   }
 
+  /**
+   * Sends a POST request to the /api/movies/add route to insert a given movie into the list.
+   * Requires authorization.
+   * @param {Movie} movie 
+   */
   addMovie = (movie) => {
     fetch(`${config.API_ENDPOINT}/movies/add`, {
       method: 'POST',
@@ -71,6 +83,11 @@ class App extends React.Component
     });
   }
 
+  /**
+   * Sends a PUT request to the /api/movies/:movieId/update route to update a given movie.
+   * Requires authorization.
+   * @param {Movie} movie 
+   */
   editMovie = (movie) => {
     fetch(`${config.API_ENDPOINT}/movies/${movie.id}/update`, {
       method: 'PUT',
@@ -92,6 +109,11 @@ class App extends React.Component
     });
   }
 
+  /**
+   * Sends a request to /api/movies/:movieId/delete to delete a movie with the given movieId.
+   * Requires authorization.
+   * @param {number} movieId 
+   */
   deleteMovie = (movieId) => {
     fetch(`${config.API_ENDPOINT}/movies/${movieId}/delete`, {
       method: 'DELETE',
@@ -112,6 +134,9 @@ class App extends React.Component
     });
   }
 
+  /**
+   * Renders all components according to route and inserts data/methods into context.
+   */
   render() {
     return ( 
       <MovieContext.Provider value={{
