@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# My Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Site](https://my-movies-client.vercel.app/)
 
-## Available Scripts
+# Api Documentation
 
-In the project directory, you can run:
+## Public Routes
 
-### `npm start`
+/api/auth/login - Allows a user to log in. - Returns: 200, {authToken: string} on valid request
++ user_name: string
++ password: string
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+/api/auth/register - Allows a user to register a new account. User name must be unique and not already taken. - Returns: 200, {status: 0, message: 'Ok'} on valid request
++ user_name: string
++ full_name: string
++ password: string
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Protected Routes ( All protected routes require Bearer authentication with valid JWT token )
 
-### `npm test`
+POST /api/auth/refresh - Allows the system to refresh a valid but expired JWT token. - Returns 200, {authToken: string} on valid request.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+GET /api/movies/ - Returns the list of movies owned by the current logged in user. - Returns 200, {movies: array} on valid request.
 
-### `npm run build`
+POST /api/movies/add - Adds a new movie to the list of the user's owned movies. - Returns 200, {status: 0} on valid request.
++ name: string
++ description: string
++ rating: number ( 1 - 5 inclusive )
++ genre: string
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Protected :movieId Routers ( All protected :movieId routes must replace :movieId with the id field on the given movie in the request string )
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+PUT /api/movies/:movieId/update - Updates the movie with an ID of :movieId. - Returns 201 on valid request.
++ name: string
++ description: string
++ rating: number ( 1 - 5 inclusive )
++ genre: string
++ owner: number ( must be the owner ID provided when the movie is requested from /api/movies/ )
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DELETE /api/movies/:movieId/delete - Deletes the movie with an ID of :movieId. Returns 201 on valid request.
 
-### `npm run eject`
+# Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![The Home page](https://my-movies-client.vercel.app/screenshots/MyMoviesHome.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![The Login page](https://my-movies-client.vercel.app/screenshots/MyMoviesLogin.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![The Movies page](https://my-movies-client.vercel.app/screenshots/MyMoviesMovies.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![The Add Movie page](https://my-movies-client.vercel.app/screenshots/MyMoviesAddMovie.png)
 
-## Learn More
+![The Edit Movie page](https://my-movies-client.vercel.app/screenshots/MyMoviesEditMovie.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![The View Movie page](https://my-movies-client.vercel.app/screenshots/MyMoviesViewMovie.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Summary
 
-### Code Splitting
+My Movies is an app that will help you keep track of any DVDs/Blu-Rays/Other kinds of Movies you own!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+It has storage, editing, sorting, and selection features to make your your movie choosing process is quick and easy!
 
-### Analyzing the Bundle Size
+It even has a public account set up so you can poke around and see how it works, details are on the home page of the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Technology Used
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ React.js
++ Node.js
++ Express.js
++ PostgreSQL
++ HTML
++ CSS
++ Javascript
