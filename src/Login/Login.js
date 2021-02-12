@@ -73,9 +73,11 @@ class Login extends React.Component
               <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
             </div>
             <hr />
-            <button 
-              disabled={!this.validateFields()} 
-              onClick={this.handleSubmitJwtAuth} >Submit</button>
+            <div className="FormGroup">
+              <button 
+                disabled={!this.validateFields()} 
+                onClick={this.handleSubmitJwtAuth} >Submit</button>
+            </div>
           </form>
         </div>
       </div>

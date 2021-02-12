@@ -6,12 +6,6 @@
     width: 100%;
 }
 
-.FormContainer {
-    width: 75%;
-    border: 1px solid grey;
-    border-radius: 25px;
-}
-
 .FormGroup {
     width: 100%;
     margin-top: 10px;

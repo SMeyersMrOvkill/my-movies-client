@@ -17,8 +17,8 @@ form {
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    box-shadow: 1px 1px 1.5px 1.5px grey;
     padding-bottom: 40px;
+    border-radius: 25px;
 }
 
 .FormGroup {
@@ -36,21 +36,6 @@ input {
 
 button {
     border-radius: 25px;
-}
-
-.btn-normal {
-    background-color: lightblue;
-    color: black;
-}
-
-.btn-success {
-    background-color: rgb(139, 206, 39);
-    color: black;
-}
-
-.btn-danger {
-    background-color: rgb(255, 0, 0);
-    color: white;
 }
 
 @media (min-width: 600px) {

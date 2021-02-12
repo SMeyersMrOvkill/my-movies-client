@@ -7,10 +7,8 @@
 
 .SortContainer {
     margin-top: 30px;
-    border: 1px solid grey;
     display: flex;
     padding: 5px;
-    box-shadow: 1px 1px 1px 1px grey;
 }
 
 .SortOption {

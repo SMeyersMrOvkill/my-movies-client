@@ -1,0 +1,62 @@
+/* body */
+
+body {
+    background-color: #2C423F;
+}
+
+/* Nav Colors/Shadows */
+
+header {
+    background-color: #829191;
+    box-shadow: 2px 2px 2px 2px #4C5B61;
+}
+
+a {
+    color: black;
+}
+
+/* MovieList Colors/Shadows */
+
+.SortContainer {
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px 2px #4C5B61;
+    background-color: #C5C5C5;
+}
+
+/* Form Colors/Shadows */
+
+.FormContainer {
+    color: black;
+    background-color: #949B96;
+    box-shadow: 2px 2px 2px 2px #4C5B61;
+}
+
+.btn-normal {
+    background-color: #C5C5C5;
+    color: black;
+}
+
+.btn-success {
+    background-color: rgb(139, 206, 39);
+    color: black;
+}
+
+.btn-danger {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+/* Movie Colors/Shadows */
+
+.Movie {
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px 2px #4C5B61;
+    background-color: #949B96;
+}
+
+/* Home Colors/Shadows */
+
+.Home {
+    background-color: #949B96;
+    box-shadow: 1px 1px 1.5px 1.5px grey;
+}

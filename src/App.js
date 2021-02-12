@@ -14,6 +14,7 @@ import AddMovie from './AddMovie/AddMovie';
 import EditMovie from './EditMovie/EditMovie';
 
 import './App.css';
+import './Theme.css';
 
 class App extends React.Component
 {

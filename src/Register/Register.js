@@ -100,9 +100,11 @@ class Register extends React.Component
               <input id="password" type="password" onChange={e => this.onPasswordChanged(e.target.value)} />
             </div>
             <hr />
-            <button
-              disabled={!this.validateFormData()}
-              onClick={this.submitRegistration}>Submit</button>
+            <div className="FormGroup">
+              <button
+                disabled={!this.validateFormData()}
+                onClick={this.submitRegistration}>Submit</button>
+            </div>
           </form>
         </div>
       </div>

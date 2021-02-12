@@ -57,6 +57,11 @@ class EditMovie extends React.Component
     this.context.deleteMovie(this.props.movie.id);
   }
 
+  back = (e) => {
+    e.preventDefault();
+    window.location = "/movies";
+  }
+
   render() {
     return (
       <div className="EditMovie">
@@ -102,6 +107,9 @@ class EditMovie extends React.Component
             </div>
             <div className="FormGroup">
               <button className="btn-danger" onClick={this.delete}>Delete</button>
+            </div>
+            <div className="FormGroup">
+              <button className="btn-normal" onClick={this.back}>Back</button>
             </div>
           </form>
         </div>

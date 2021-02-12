@@ -1,6 +1,3 @@
-header {
-    box-shadow: 1px 1px 1.5px 1.5px grey;
-}
 
 header h1 {
     text-align: center;
@@ -22,7 +19,6 @@ nav ul {
 }
 
 nav ul li a {
-    color: black;
     text-decoration: underline;
     margin: 0 20px 0 0;
 }

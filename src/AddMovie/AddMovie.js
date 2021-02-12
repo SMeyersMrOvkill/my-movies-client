@@ -65,6 +65,11 @@ class AddMovie extends React.Component
     })
   }
 
+  back = (e) => {
+    e.preventDefault();
+    window.location = "/movies";
+  }
+
   render() {
     return (
       <div className="AddMovie">
@@ -95,10 +100,15 @@ class AddMovie extends React.Component
                 onChange={e => this.onGenreChanged(e.target.value)} />
             </div>
             <hr />
-            <button
-            className="btn-success"
-            disabled={!this.allValuesEntered()} 
-            onClick={this.submit}>Submit</button>
+            <div className="FormGroup">
+              <button
+              className="btn-success"
+              disabled={!this.allValuesEntered()} 
+              onClick={this.submit}>Submit</button>
+            </div>
+            <div className="FormGroup">
+              <button className="btn-normal" onClick={this.back}>Back</button>
+            </div>
           </form>
         </div>
       </div>
